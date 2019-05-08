@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PessoaServiceImp" targetNamespace="http://serviceImp.desafioEbix.com.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://serviceImp.desafioEbix.com.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://serviceImp.desafioEbix.com.br/" schemaLocation="PessoaServiceImp_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="excluir">
+    <wsdl:part name="parameters" element="tns:excluir">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarPorIdResponse">
+    <wsdl:part name="parameters" element="tns:consultarPorIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarTodos">
+    <wsdl:part name="parameters" element="tns:consultarTodos">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="excluirResponse">
+    <wsdl:part name="parameters" element="tns:excluirResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="alterarResponse">
+    <wsdl:part name="parameters" element="tns:alterarResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarTodosResponse">
+    <wsdl:part name="parameters" element="tns:consultarTodosResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="incluir">
+    <wsdl:part name="parameters" element="tns:incluir">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="incluirResponse">
+    <wsdl:part name="parameters" element="tns:incluirResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarPorId">
+    <wsdl:part name="parameters" element="tns:consultarPorId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="alterar">
+    <wsdl:part name="parameters" element="tns:alterar">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PessoaServiceImpPortType">
+    <wsdl:operation name="excluir">
+      <wsdl:input name="excluir" message="tns:excluir">
+    </wsdl:input>
+      <wsdl:output name="excluirResponse" message="tns:excluirResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="incluir">
+      <wsdl:input name="incluir" message="tns:incluir">
+    </wsdl:input>
+      <wsdl:output name="incluirResponse" message="tns:incluirResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarTodos">
+      <wsdl:input name="consultarTodos" message="tns:consultarTodos">
+    </wsdl:input>
+      <wsdl:output name="consultarTodosResponse" message="tns:consultarTodosResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPorId">
+      <wsdl:input name="consultarPorId" message="tns:consultarPorId">
+    </wsdl:input>
+      <wsdl:output name="consultarPorIdResponse" message="tns:consultarPorIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="alterar">
+      <wsdl:input name="alterar" message="tns:alterar">
+    </wsdl:input>
+      <wsdl:output name="alterarResponse" message="tns:alterarResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PessoaServiceImpSoapBinding" type="tns:PessoaServiceImpPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="excluir">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="excluir">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="excluirResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="incluir">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="incluir">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="incluirResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarTodos">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultarTodos">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarTodosResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPorId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultarPorId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarPorIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="alterar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="alterar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="alterarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PessoaServiceImp">
+    <wsdl:port name="PessoaServiceImpPort" binding="tns:PessoaServiceImpSoapBinding">
+      <soap:address location="http://localhost:9090/PessoaServiceImpPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
